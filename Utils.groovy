@@ -1,6 +1,4 @@
 
-import hudson.model.AbstractBuild
-import hudson.model.BuildListener
 
 import java.nio.file.Files
 import java.nio.file.Path
@@ -22,7 +20,7 @@ class Utils {
 
 
 
-    public static synchronized String getOutputFile(AbstractBuild build, BuildListener listener, boolean isDownStreamLocation) {
+    /*public static synchronized String getOutputFile(AbstractBuild build, BuildListener listener, boolean isDownStreamLocation) {
         String jenkinsHome = build.getEnvironment(listener).get(JENKINS__HOME, "");
         String jobName = build.getEnvironment(listener).get(JOB__NAME, "");
         if (isDownStreamLocation)
@@ -60,5 +58,5 @@ class Utils {
             return Boolean.FALSE;
         }
         return Boolean.TRUE;
-    }
+    }*/
 }
