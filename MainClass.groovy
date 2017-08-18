@@ -1,7 +1,7 @@
 class MainClass {
 
     public static void main(def args) {
-        println("Printing arguments");
+        println("Printing arguments #{bamboo.build.working.directory}");
         for(String arguments : args) {
             println (arguments);
         }
