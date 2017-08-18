@@ -1,12 +1,16 @@
 class MainClass {
 
     public static void main(def args) {
-		def workingDir = System.getenv('bamboo.build.working.directory');
-        println("Printing arguments "+ workingDir);
+		
+        println("Printing arguments ");
         for(String arguments : args) {
             println (arguments);
         }
-		Matcher.run("C:\\ATlogs.txt",args[0]+"\\"+args[1]+".html", Utils.STARTING_PATTERN,Utils.FINISHING_PATTERN,
+		String workingDir = args[0];
+		String buildNumber = args[1];
+		outPutURL = workingDir+buildNumber.html
+		
+		Matcher.run("C:\\ATlogs.txt",outPutURL, Utils.STARTING_PATTERN,Utils.FINISHING_PATTERN,
         Utils.DATE_FORMATTER,Utils.DATE_PATTERN);
     }
 
