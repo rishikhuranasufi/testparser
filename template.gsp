@@ -1,14 +1,14 @@
 <!doctype html><html><head>
-    <link rel="stylesheet" href="bootstrap.min-3.3.4.css" type="text/css"/>
-    <link rel="stylesheet" href="bootstrap-theme.min-3.3.4.css" type="text/css"/>
-    <link rel="stylesheet" href="app.css" type="text/css"/>
-    <link rel="stylesheet" href="toastr.min.css" type="text/css"/>
+    <link rel="stylesheet" href="output/dep/bootstrap.min-3.3.4.css" type="text/css"/>
+    <link rel="stylesheet" href="output/dep/bootstrap-theme.min-3.3.4.css" type="text/css"/>
+    <link rel="stylesheet" href="output/dep/app.css" type="text/css"/>
+    <link rel="stylesheet" href="output/dep/toastr.min.css" type="text/css"/>
 
-    <script src="jquery-latest.min-1.11.1.js"></script>
-    <script src="d3.v3.min.js"></script>
-    <script src="d3-timeline-0.0.4.js"></script>
-    <script src="bootstrap.min-3.3.4.js"></script>
-    <script src="toastr.min.js"></script>
+    <script src="output/dep/jquery-latest.min-1.11.1.js"></script>
+    <script src="output/dep/d3.v3.min.js"></script>
+    <script src="output/dep/d3-timeline-0.0.4.js"></script>
+    <script src="output/dep/bootstrap.min-3.3.4.js"></script>
+    <script src="output/dep/toastr.min.js"></script>
     <script type="text/javascript">
         window.onload = function () {
             toastr.options = {
