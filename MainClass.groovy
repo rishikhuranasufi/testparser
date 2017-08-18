@@ -6,7 +6,7 @@ class MainClass {
         for(String arguments : args) {
             println (arguments);
         }
-		Matcher.run("C:\\ATlogs.txt","C:\\test.html", Utils.STARTING_PATTERN,Utils.FINISHING_PATTERN,
+		Matcher.run("C:\\ATlogs.txt",args[0]+"\"+args[1]+".html", Utils.STARTING_PATTERN,Utils.FINISHING_PATTERN,
         Utils.DATE_FORMATTER,Utils.DATE_PATTERN);
     }
 
