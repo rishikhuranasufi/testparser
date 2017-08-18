@@ -8,7 +8,7 @@ class MainClass {
         }
 		String workingDir = args[0];
 		String buildNumber = args[1];
-		String outPutURL = workingDir+buildNumber+".html";
+		String outPutURL = workingDir+"/output/"+buildNumber+".html";
 		
 		Matcher.run("C:\\ATlogs.txt",outPutURL, Utils.STARTING_PATTERN,Utils.FINISHING_PATTERN,
         Utils.DATE_FORMATTER,Utils.DATE_PATTERN);
