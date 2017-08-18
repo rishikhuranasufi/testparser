@@ -1,7 +1,8 @@
 class MainClass {
 
     public static void main(def args) {
-        println("Printing arguments #{bamboo.build.working.directory}");
+		def workingDir = System.getenv('bamboo.build.working.directory');
+        println("Printing arguments "+ workingDir);
         for(String arguments : args) {
             println (arguments);
         }
