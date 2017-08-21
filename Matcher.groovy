@@ -34,11 +34,11 @@ class Matcher {
 
     static
     def run(HashMap<String, String> urlOrFileLocations, String fileLocation,
-            Pattern startingPattern, Pattern endingPattern, DateTimeFormatter formatter, Pattern timePattern, PrintStream printStream) {
+            Pattern startingPattern, Pattern endingPattern, DateTimeFormatter formatter, Pattern timePattern) {
         def generator = new Generator()
 
         urlOrFileLocations.each { k, v ->
-            processUrlOrFile(generator, k, v, startingPattern, endingPattern, formatter, timePattern, printStream)
+            processUrlOrFile(generator, k, v, startingPattern, endingPattern, formatter, timePattern)
         }
 
         generator.complete(fileLocation)
@@ -46,7 +46,7 @@ class Matcher {
 
     private
     static processUrlOrFile(Generator generator, String at_name, String urlOrFileLocation,
-                            Pattern startingPattern, Pattern endingPattern, DateTimeFormatter formatter, Pattern timePattern, PrintStream printStream) {
+                            Pattern startingPattern, Pattern endingPattern, DateTimeFormatter formatter, Pattern timePattern) {
         def at = urlOrFileLocation.startsWith("http") ? new URL(urlOrFileLocation).text : new File(urlOrFileLocation).text
         def lines = at.readLines()
         lines.each { line ->
@@ -54,13 +54,13 @@ class Matcher {
             if (matcherStart) {
                 def matchedQualifier = matcherStart[0] as List<String>
                 generator.testStarted(at_name + " > " + matchedQualifier[1], matchedQualifier.size() > 2 ? matchedQualifier[2] : matchedQualifier[1],
-                        extractTime(at_name, line, timePattern, formatter), printStream)
+                        extractTime(at_name, line, timePattern, formatter))
             } else {
                 def matcherFinish = line =~ endingPattern
                 if (matcherFinish) {
                     def matchedQualifier = matcherFinish[0] as List<String>
                     generator.testEnded(at_name + " > " + matchedQualifier[1], matchedQualifier.size() > 2 ? matchedQualifier[2] : matchedQualifier[1],
-                            extractTime(at_name, line, timePattern, formatter), printStream)
+                            extractTime(at_name, line, timePattern, formatter))
                 }
             }
         }

@@ -195,7 +195,7 @@
 <div class="container-fluid">
     <div class="row" style="outline: 1px solid #65cfd4;">
         <div class="col-md-6">
-            <img src="/plugin/logParser/img/BW_logo.png">
+            <img src="dep/BW_logo.png">
         </div>
         <div class="col-md-6 pull-right" style="text-align: right;">
             <h4>Log Parser</h4>
@@ -212,9 +212,9 @@
         </div>
         <div class="col-md-6">
             <div id="tableHeading1">
-                <img id="ascendingOrder" src="/plugin/logParser/img/ascending.png" width="12" height="12" style="cursor: pointer;">
+                <img id="ascendingOrder" src="dep/ascending.png" width="12" height="12" style="cursor: pointer;">
                 Time taken
-                <img id="descendingOrder" src="/plugin/logParser/img/descending.png" width="12" height="12" style="cursor: pointer;">
+                <img id="descendingOrder" src="dep/descending.png" width="12" height="12" style="cursor: pointer;">
             </div>
             <div id="totalTime">
             </div>
