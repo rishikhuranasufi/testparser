@@ -19,7 +19,7 @@ class MainClass {
                 HashMap<String, String> downStreamConsoleUrls = new LinkedHashMap();
 
         for(String jobName : jobNamesInArray){
-            downStreamConsoleUrls.put(jobName,bambooUrl+jobName+"/build_logs/"+jobName+"-"+buildNumber+".log");
+            downStreamConsoleUrls.put(jobName,bambooUrl+"download/"+jobName+"/build_logs/"+jobName+"-"+buildNumber+".log");
         }
 		
 		Matcher.run(downStreamConsoleUrls,outPutURL, Utils.STARTING_PATTERN,Utils.FINISHING_PATTERN,
