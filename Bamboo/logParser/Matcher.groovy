@@ -49,6 +49,7 @@ class Matcher {
                             Pattern startingPattern, Pattern endingPattern, DateTimeFormatter formatter, Pattern timePattern) {
         def at = urlOrFileLocation.startsWith("http") ? new URL(urlOrFileLocation).text : new File(urlOrFileLocation).text
         def lines = at.readLines()
+		//println("Console logs lines to be parsed are "+lines);
         lines.each { line ->
             def matcherStart = line =~ startingPattern
             if (matcherStart) {

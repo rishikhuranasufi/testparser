@@ -27,6 +27,7 @@ class Generator {
 
     void testStarted(String suiteName, String testName, LocalDateTime start) {
         //printStream.println("Starting $suiteName :: $testName")
+		println("Starting $suiteName :: $testName");
         context.putIfAbsent(suiteName, new HashMap<String, LocalDateTime>())
         def entireSuite = context[suiteName]
         entireSuite[testName] = start
@@ -36,6 +37,7 @@ class Generator {
 
     void testEnded(String suiteName, String testName, LocalDateTime end) {
         //printStream.println("Ending $suiteName :: $testName")
+		println("Ending $suiteName :: $testName");
         def testInfo = context[suiteName]
         def begin = testInfo.remove(testName)
         if (begin) {
